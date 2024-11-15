@@ -1,0 +1,60 @@
+{
+  "fields": [
+    {
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "validation": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 10
+      }
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "validation": {
+        "min": 0,
+        "max": 120
+      }
+    },
+    {
+      "id": "isStudent",
+      "label": "Are you a student?",
+      "type": "checkbox"
+    },
+    {
+      "id": "schoolName",
+      "label": "School Name",
+      "type": "text",
+      "showIf": {
+        "field": "isStudent",
+        "value": true
+      }
+    },
+    {
+      "id": "schoolStartYear",
+      "label": "When did you enroll ?",
+      "type": "select",
+      "showIf": {
+        "field": "isStudent",
+        "value": true
+      },
+      "options": [
+        {
+          "label": "2000",
+          "value": 2000
+        },
+        {
+          "label": "2001",
+          "value": 2001
+        },
+        {
+          "label": "2002",
+          "value": 2002
+        }
+      ]
+    }
+  ]
+}
